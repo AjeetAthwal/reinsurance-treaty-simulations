@@ -1,30 +1,11 @@
 const {DistributionFactory, DistributionType } = require("./loss");
 const {XoLTreaty, XoLTreatyLossGenerator } = require("./treaty")
 
-
 // Function to display output in the UI
 function displayOutput(output) {
     const outputElement = document.getElementById("output");
     outputElement.textContent = output;
 }
-
-// Example usage
-const generator = DistributionFactory.createGenerator(distributionType, distributionParameters);
-const xolTreaty = new XoLTreaty(attachment, limit);
-const xolGenerator = new XoLTreatyLossGenerator(generator, xolTreaty);
-
-const { grossLosses, netLosses } = xolGenerator.generateLossesWithTreaty(numLosses);
-
-// Generate formatted output
-const formattedOutput = `
-Gross losses: ${grossLosses.join(", ")}
-Net losses with XoL Treaty: ${netLosses.join(", ")}
-`;
-
-// Display the output in the UI
-displayOutput(formattedOutput);
-
-// ... Your existing JavaScript code ...
 
 // Function to calculate and display results
 function calculateResults() {
@@ -61,4 +42,3 @@ function calculateResults() {
 // Attach event listener to the calculate button
 const calculateButton = document.getElementById("calculate-button");
 calculateButton.addEventListener("click", calculateResults);
-
