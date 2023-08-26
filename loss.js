@@ -52,5 +52,3 @@ class DistributionFactory {
         }
     }
 }
-
-module.exports = {LossGenerator, DistributionFactory, DistributionType };

@@ -1,5 +1,3 @@
-const {LossGenerator} = require("./loss");
-
 class XoLTreaty {
     constructor(attachment, limit) {
         this.attachment = attachment;
@@ -31,4 +29,3 @@ class XoLTreatyLossGenerator extends LossGenerator {
     }
 }
 
-module.exports = {XoLTreaty, XoLTreatyLossGenerator };
