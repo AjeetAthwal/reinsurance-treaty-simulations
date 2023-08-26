@@ -1,3 +1,33 @@
+// Load input values from Local Storage
+function loadInputValues() {
+    const savedInputValues = localStorage.getItem('inputValues');
+    if (savedInputValues) {
+        const {
+            distributionType,
+            mean,
+            standardDeviation,
+            min,
+            max,
+            attachment,
+            limit,
+            numLosses
+        } = JSON.parse(savedInputValues);
+
+        document.getElementById("distribution-type").value = distributionType;
+        document.getElementById("mean").value = mean;
+        document.getElementById("standard-deviation").value = standardDeviation;
+        document.getElementById("min").value = min;
+        document.getElementById("max").value = max;
+        document.getElementById("attachment").value = attachment;
+        document.getElementById("limit").value = limit;
+        document.getElementById("num-losses").value = numLosses;
+    }
+}
+
+// Call the function to load input values when the page loads
+window.addEventListener('load', loadInputValues);
+
+
 // Function to display output in the UI
 function displayOutput(output) {
     const outputElement = document.getElementById("output");
@@ -25,6 +55,19 @@ function calculateResults() {
     const xolGenerator = new XoLTreatyLossGenerator(generator, xolTreaty);
 
     const { grossLosses, netLosses } = xolGenerator.generateLossesWithTreaty(numLosses);
+
+    // Save input values to Local Storage
+    const inputValues = {
+        distributionType,
+        mean,
+        standardDeviation,
+        min,
+        max,
+        attachment,
+        limit,
+        numLosses
+    };
+    localStorage.setItem('inputValues', JSON.stringify(inputValues));
 
     // Generate formatted output
     const formattedOutput = `
