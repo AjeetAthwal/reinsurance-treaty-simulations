@@ -28,8 +28,21 @@ function calculateResults() {
 
     // Generate formatted output
     const formattedOutput = `
-    Gross losses: ${grossLosses.join(", ")}
-    Net losses with XoL Treaty: ${netLosses.join(", ")}
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Gross Losses</th>
+            <th>Net Losses with XoL Treaty</th>
+        </tr>
+        ${grossLosses.map((grossLoss, index) => `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${grossLoss}</td>
+                <td>${netLosses[index]}</td>
+            </tr>
+        `).join("")}
+    </table>
     `;
 
     // Display the output in the UI
