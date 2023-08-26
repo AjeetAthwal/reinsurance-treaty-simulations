@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loss Generator UI</title>
+</head>
+<body>
+    <h1>Loss Generator UI</h1>
+    <pre id="output"></pre>
+    <script src="index.js"></script>
+    <!-- ... Your existing HTML ... -->
+
+<form id="parameters-form">
+    <label for="distribution-type">Distribution Type:</label>
+    <select id="distribution-type" name="distribution-type">
+        <option value="normal">Normal</option>
+        <option value="uniform">Uniform</option>
+    </select><br>
+
+    <label for="mean">Mean:</label>
+    <input type="number" id="mean" name="mean"><br>
+
+    <label for="standard-deviation">Standard Deviation:</label>
+    <input type="number" id="standard-deviation" name="standard-deviation"><br>
+
+    <label for="min">Min:</label>
+    <input type="number" id="min" name="min"><br>
+
+    <label for="max">Max:</label>
+    <input type="number" id="max" name="max"><br>
+
+    <label for="attachment">Attachment:</label>
+    <input type="number" id="attachment" name="attachment"><br>
+
+    <label for="limit">Limit:</label>
+    <input type="number" id="limit" name="limit"><br>
+
+    <label for="num-losses">Number of Losses:</label>
+    <input type="number" id="num-losses" name="num-losses"><br>
+
+    <button type="button" id="calculate-button">Calculate</button>
+</form>
+
+</body>
+</html>
+
