@@ -1,8 +1,8 @@
-const {DistributionFactory } = require("./loss");
+const {DistributionFactory, DistributionType } = require("./loss");
 const {XoLTreaty, XoLTreatyLossGenerator } = require("./treaty")
 
 // Example usage
-const distributionType = "normal"; // Choose either "normal" or "uniform"
+const distributionType = DistributionType.NORMAL; // Choose either DistributionType.NORMAL or DistributionType.UNIFORM
 const distributionParameters = {
     mean: 1000000,
     standardDeviation: 200000,

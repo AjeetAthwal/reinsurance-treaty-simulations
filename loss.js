@@ -34,16 +34,23 @@ class UniformLossGenerator extends LossGenerator {
     }
 }
 
+// Define an enum for distribution types
+const DistributionType = {
+    NORMAL: "normal",
+    UNIFORM: "uniform"
+};
+
 class DistributionFactory {
     static createGenerator(distributionType, parameters) {
-        if (distributionType === "normal") {
-            return new NormalLossGenerator(parameters);
-        } else if (distributionType === "uniform") {
-            return new UniformLossGenerator(parameters);
-        } else {
-            throw new Error("Unsupported distribution type");
+        switch (distributionType) {
+            case DistributionType.NORMAL:
+                return new NormalLossGenerator(parameters);
+            case DistributionType.UNIFORM:
+                return new UniformLossGenerator(parameters);
+            default:
+                throw new Error("Unsupported distribution type");
         }
     }
 }
 
-module.exports = {LossGenerator, DistributionFactory };
+module.exports = {LossGenerator, DistributionFactory, DistributionType };
