@@ -89,6 +89,11 @@ function calculateResults() {
     `;
 
     // Display the output in the UI
+    function displayOutput(output) {
+        const outputElement = document.getElementById("output");
+        outputElement.innerHTML = output; // Use innerHTML instead of textContent
+    }
+
     displayOutput(formattedOutput);
 }
 
