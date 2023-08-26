@@ -1,6 +1,3 @@
-const {DistributionFactory, DistributionType } = require("./loss");
-const {XoLTreaty, XoLTreatyLossGenerator } = require("./treaty")
-
 // Function to display output in the UI
 function displayOutput(output) {
     const outputElement = document.getElementById("output");
