@@ -1,4 +1,4 @@
-import DistributionFactory from './factories/DistributionFactory';
+import DistributionFactory from './factories/DistributionFactory.js';
 import { XoLTreaty, XoLTreatyLossGenerator } from './classes';
 import './utils'; // Import other utilities if needed
 
