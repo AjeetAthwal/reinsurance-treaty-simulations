@@ -1,4 +1,4 @@
-import LossGenerator from './LossGenerator';
+import LossGenerator from './LossGenerator.js';
 
 class NormalLossGenerator extends LossGenerator {
     generateLoss() {

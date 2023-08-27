@@ -1,4 +1,4 @@
-import { NormalLossGenerator, UniformLossGenerator } from '../classes';
+import { NormalLossGenerator, UniformLossGenerator } from '../classes/index.js';
 
 // Define an enum for distribution types
 const DistributionType = {

@@ -1,4 +1,4 @@
-import LossGenerator from '../generators/LossGenerator';
+import LossGenerator from '../generators/LossGenerator.js';
 
 class XoLTreatyLossGenerator extends LossGenerator {
     constructor(generator, treaty) {
