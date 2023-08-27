@@ -1,14 +1,4 @@
-class XoLTreaty {
-    constructor(attachment, limit) {
-        this.attachment = attachment;
-        this.limit = limit;
-    }
-
-    applyTreaty(loss) {
-        const cappedLoss = Math.min(loss - this.attachment, this.limit);
-        return Math.max(cappedLoss, 0);
-    }
-}
+import LossGenerator from '../generators/LossGenerator';
 
 class XoLTreatyLossGenerator extends LossGenerator {
     constructor(generator, treaty) {
@@ -29,3 +19,4 @@ class XoLTreatyLossGenerator extends LossGenerator {
     }
 }
 
+export default XoLTreatyLossGenerator;

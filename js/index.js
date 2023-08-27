@@ -1,3 +1,7 @@
+import DistributionFactory from './factories/DistributionFactory';
+import { XoLTreaty, XoLTreatyLossGenerator } from './classes';
+import './utils'; // Import other utilities if needed
+
 // Load input values from Local Storage
 function loadInputValues() {
     const savedInputValues = localStorage.getItem('inputValues');
