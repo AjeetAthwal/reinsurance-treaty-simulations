@@ -1,6 +1,6 @@
 import DistributionFactory from './factories/DistributionFactory.js';
-import { XoLTreaty, XoLTreatyLossGenerator } from './classes';
-import './utils'; // Import other utilities if needed
+import { XoLTreaty, XoLTreatyLossGenerator } from './classes/index.js';
+import './utils.js'; // Import other utilities if needed
 
 // Load input values from Local Storage
 function loadInputValues() {
